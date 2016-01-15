@@ -1,7 +1,7 @@
 #!/bin/bash
 #-------------------------------------------------------------
 #     FILE: TOOL_INSTALLATION.BASH
-#     DESCRIPTION: INSTALLATION OF TOOLS FOR ENVIROMENT
+#     DESCRIPTION: INSTALLATION OF TOOLS FOR ENVIRONMENT
 #     VERSION: 1.0
 #-------------------------------------------------------------
 

@@ -1,0 +1,8 @@
+#!/bin/bash
+#-------------------------------------------------------------
+#     FILE: TEST_INSTALLATION.BASH
+#     DESCRIPTION: TOOLS THAT WILL BE USED FOR TESTING IN THE ENVIRONMENT
+#     VERSION: 1.0
+#-------------------------------------------------------------
+
+#first cloning
