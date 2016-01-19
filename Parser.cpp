@@ -1,6 +1,6 @@
 #include "Parser.hpp"
 
-int setPositions(std::string line, int follow) {
+int Parser::setPositions(std::string line, int follow) {
 	if (follow == 1) {
 		p1.DateTime = line;
 	}
@@ -33,7 +33,7 @@ int setPositions(std::string line, int follow) {
 	return 0;
 }
 
-int setEvents(std::string line, int follow) {
+int Parser::setEvents(std::string line, int follow) {
 	if (follow == 1) {
 		e1.DateTime = line;
 		return 0;
