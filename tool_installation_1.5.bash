@@ -6,7 +6,7 @@
 #-------------------------------------------------------------
 
 
-if ["$1" eq '-help']
+if ["$1" eq '-help'];
 	then
 		echo "Welome to the help page"
 		echo "Here is a list of arguements you"
@@ -19,7 +19,7 @@ if ["$1" eq '-help']
 		
 fi
 
-if ["$1" == '-all']
+if ["$1" eq '-all'];
 	then
 #Installing C++ compiler and related tools
 sudo apt-get update
@@ -30,7 +30,7 @@ git clone feature-01 http://github.com/SDEV56/INFPRJ0156.git
 
 fi
 
-if ["$1" eq '-postgres'] || [ "$1" eq '-all' ] 
+if ["$1" eq '-postgres'] || [ "$1" eq '-all' ];
 	then
 #installing postgres and additional packages
 #PostGIS
@@ -40,26 +40,26 @@ sudo apt-get install postgresql postgresql-contrib
 apt-cache search postgres
 fi
 
-if ["$1" == -pgadmin] || [ "$1" == '-all' ]
+if ["$1" eq -pgadmin] || [ "$1" eq '-all' ];
 	then
 #installing PGadmin3 for the lovers
 sudo apt-get install pgadmin3
 fi
 
-if ["$1" == -cppunit] || [ "$1" == '-all' ]
+if ["$1" eq -cppunit] || [ "$1" eq '-all' ];
 	then
 #Installing Cppunit
 apt-get install libcppunit-doc libcppunit-dev
 fi
 
-if ["$1" == -cppcheck] || [ "$1" == '-all' ]
+if ["$1" eq -cppcheck] || [ "$1" eq '-all' ];
 	then
 #Installing CPPCheck
 sudo apt-get install tre-agrep cppcheck
 fi
 
 
-if ["$1" == '-test']
+if ["$1" eq '-test'];
 mkdr logs
 
 #running cloc
