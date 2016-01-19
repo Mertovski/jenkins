@@ -3,14 +3,14 @@
 #include <sstream>
 #include <fstream>
 #include <string>
-#include <libpq-fe.h>
-#include <FileWatcher.h>
+//#include <libpq-fe.h>
+//#include <FileWatcher.h>
 #include <ParseCSV.h>
-#include <Positions.h>
-#include <Events.h>
-#include <Connections.h>
-#include <Monitoring.h>
-#include <Database.h>
+//#include <Positions.h>
+//#include <Events.h>
+//#include <Connections.h>
+//#include <Monitoring.h>
+//#include <Database.h>
 using namespace std;
 
 Positions p1;

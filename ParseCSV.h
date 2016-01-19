@@ -1,11 +1,11 @@
 #ifndef getCsv_H
 #define getCsv_H
 #include <string>
-#include <libpq-fe.h>
-#include <Positions.h>
-#include <Events.h>
-#include <Connections.h>
-#include <Monitoring.h>
+//#include <libpq-fe.h>
+//#include <Positions.h>
+//#include <Events.h>
+//#include <Connections.h>
+//#include <Monitoring.h>
 
 void getDataCSV(std::string file);
 void checkNameCSV(std::string file);
