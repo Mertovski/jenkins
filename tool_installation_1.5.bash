@@ -60,6 +60,9 @@ fi
 
 
 if [ $1 = "-test" ]; then
+mv /jenkins/CBasicMath.hpp /INFPRJ0156
+mv /jenkins/CBasicMath.cpp /INFPRJ0156
+mv /jenkins/TestBasicMath.cpp /INFPRJ0156
 mkdr logs
 cd INFPRJ0156
 
@@ -70,4 +73,8 @@ cloc --out=logs/cloc_log.txt INFPRJ0156
 #running cppcheck
 cat logs/cppcheck_log.txt
 cppcheck . 2> logs/cppcheck_log.txt
+
+#running unittest
+ g++ -o testBasicMath CBasicMath.cpp TestBasicMath.cpp -lcppunit
+ ./testBasicMath
 fi
