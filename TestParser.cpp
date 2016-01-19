@@ -24,8 +24,8 @@ using namespace std;
 class TestParser : public CppUnit::TestFixture
 {
 	CPPUNIT_TEST_SUITE(TestParser);
-	CPPUNIT_TEST(testAddition);
-	CPPUNIT_TEST(testMultiply);
+	CPPUNIT_TEST(testsetPositions);
+	CPPUNIT_TEST(testsetEvents);
 	CPPUNIT_TEST_SUITE_END();
 
 public:
