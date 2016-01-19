@@ -25,4 +25,5 @@ mkdr logs
 cat logs/cloc_log.txt
 cloc --out=logs/cloc_log.txt INFPRJ0156
 
-
+#Installing CPPCheck
+sudo apt-get install tre-agrep cppcheck

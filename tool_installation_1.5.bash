@@ -15,17 +15,19 @@ if [ $1 = "-help" ]; then
 		echo "-cppunit		|	Installs cppunit"
 		echo "-cppcheck		|	Installs ccpcheck"
 		echo "-test			|	This runs test. first -all"
+		echo "-clonerep		|	Clones the repo of the project"
 		
+fi
+
+if [ $1 = "-clonerep" ]; then
+#cloning the repository for code
+git clone -b feature-01 https://github.com/SDEV56/INFPRJ0156.git
 fi
 
 if [ $1 = "-all" ]; then
 #Installing C++ compiler and related tools
 sudo apt-get update
 sudo apt-get install build-essential manpages-dev
-
-#cloning the repository for code
-git clone feature-01 http://github.com/SDEV56/INFPRJ0156.git
-
 fi
 
 if [ $1 = "-postgres" ] || [ $1 = "-all" ]; then
@@ -59,7 +61,13 @@ fi
 
 if [ $1 = "-test" ]; then
 mkdr logs
+cd INFPRJ0156
 
 #running cloc
 cat logs/cloc_log.txt
 cloc --out=logs/cloc_log.txt INFPRJ0156
+
+#running cppcheck
+cat logs/cppcheck_log.txt
+cppcheck . 2> logs/cppcheck_log.txt
+fi
