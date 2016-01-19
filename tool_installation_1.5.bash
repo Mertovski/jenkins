@@ -19,8 +19,7 @@ if ["$1" eq '-help'];
 		
 fi
 
-if ["$1" eq '-all'];
-	then
+if [ $1 = "-all" ]; then
 #Installing C++ compiler and related tools
 sudo apt-get update
 sudo apt-get install build-essential manpages-dev
@@ -30,8 +29,8 @@ git clone feature-01 http://github.com/SDEV56/INFPRJ0156.git
 
 fi
 
-if ["$1" eq '-postgres'] || [ "$1" eq '-all' ];
-	then
+if [ $1 = "-postgres" ] || [ $1 = "-all" ]; then
+
 #installing postgres and additional packages
 #PostGIS
 #Procedural languages
@@ -40,26 +39,26 @@ sudo apt-get install postgresql postgresql-contrib
 apt-cache search postgres
 fi
 
-if ["$1" eq -pgadmin] || [ "$1" eq '-all' ];
-	then
+if [ $1 = "-pgadmin" ] || [ $1 = "-all" ]; then
+
 #installing PGadmin3 for the lovers
 sudo apt-get install pgadmin3
 fi
 
-if ["$1" eq -cppunit] || [ "$1" eq '-all' ];
-	then
+if [ $1 = "-cppunit" ] || [ $1 = "-all" ]; then
+
 #Installing Cppunit
 apt-get install libcppunit-doc libcppunit-dev
 fi
 
-if ["$1" eq -cppcheck] || [ "$1" eq '-all' ];
-	then
+if [ $1 = "-cppcheck" ] || [ $1 = "-all" ]; then
+
 #Installing CPPCheck
 sudo apt-get install tre-agrep cppcheck
 fi
 
 
-if ["$1" eq '-test'];
+if [ $1 = "-test" ]; then
 mkdr logs
 
 #running cloc
