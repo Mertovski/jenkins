@@ -6,8 +6,7 @@
 #-------------------------------------------------------------
 
 
-if ["$1" eq '-help'];
-	then
+if [ $1 = "-help" ]; then
 		echo "Welome to the help page"
 		echo "Here is a list of arguements you"
 		echo "-all			|	Installs all depencies"
