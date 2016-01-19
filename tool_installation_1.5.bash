@@ -63,16 +63,11 @@ if [ $1 = "-test" ]; then
 
 #installing cloc
 sudo apt-get install cloc
-
-mv /jenkins/CBasicMath.hpp /INFPRJ0156
-mv /jenkins/CBasicMath.cpp /INFPRJ0156
-mv /jenkins/TestBasicMath.cpp /INFPRJ0156
-mkdir logs
-cd INFPRJ0156
+mkdir ../logs
 
 #running cloc
 cat logs/cloc_log.txt
-cloc --out=logs/cloc_log.txt INFPRJ0156
+cloc --out=logs/cloc_log.txt ../INFPRJ0156
 
 #running cppcheck
 cat logs/cppcheck_log.txt
