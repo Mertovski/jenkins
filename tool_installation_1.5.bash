@@ -6,15 +6,7 @@
 #-------------------------------------------------------------
 
 
-#Installing C++ compiler and related tools
-
-sudo apt-get update
-
-sudo apt-get install build-essential manpages-dev
-
-#Setting up parameters to 
-
-if ["$1" == '-help']
+if ["$1" eq '-help']
 	then
 		echo "Welome to the help page"
 		echo "Here is a list of arguements you"
@@ -27,7 +19,18 @@ if ["$1" == '-help']
 		
 fi
 
-if ["$1" == '-postgres'] || [ "$1" == '-all' ] 
+if ["$1" == '-all']
+	then
+#Installing C++ compiler and related tools
+sudo apt-get update
+sudo apt-get install build-essential manpages-dev
+
+#cloning the repository for code
+git clone feature-01 http://github.com/SDEV56/INFPRJ0156.git
+
+fi
+
+if ["$1" eq '-postgres'] || [ "$1" eq '-all' ] 
 	then
 #installing postgres and additional packages
 #PostGIS
@@ -55,9 +58,6 @@ if ["$1" == -cppcheck] || [ "$1" == '-all' ]
 sudo apt-get install tre-agrep cppcheck
 fi
 
-if ["$1" == '-all']
-#cloning the repository for code
-git clone feature-01 http://github.com/SDEV56/INFPRJ0156.git
 
 if ["$1" == '-test']
 mkdr logs
