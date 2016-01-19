@@ -31,7 +31,6 @@ public:
 
 protected:
 	void setPositions(void);
-	void setEvents(void);
 
 private:
 
