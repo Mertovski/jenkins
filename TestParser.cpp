@@ -46,13 +46,13 @@ private:
 void
 TestParser::testsetPositions(void)
 {
-	CPPUNIT_ASSERT(2 == mTestObj->setPositions("b", 4));
+	CPPUNIT_ASSERT(2 == mTestObj->setPositions(1, 4));
 }
 
 void
 TestParser::testsetEvents(void)
 {
-	CPPUNIT_ASSERT(0 == mTestObj->setEvents("a", 1));
+	CPPUNIT_ASSERT(0 == mTestObj->setEvents(1, 1));
 }
 
 void TestParser::setUp(void)
@@ -67,7 +67,7 @@ void TestParser::tearDown(void)
 
 //-----------------------------------------------------------------------------
 
-CPPUNIT_TEST_SUITE_REGISTRATION(TestParser);
+CPPUNIT_TEST_SUITE_REGISTRATION( TestParser );
 
 int main(int argc, char* argv[])
 {
@@ -76,20 +76,20 @@ int main(int argc, char* argv[])
 
 	// register listener for collecting the test-results
 	CPPUNIT_NS::TestResultCollector collectedresults;
-	testresult.addListener(&collectedresults);
+	testresult.addListener (&collectedresults);
 
 	// register listener for per-test progress output
 	CPPUNIT_NS::BriefTestProgressListener progress;
-	testresult.addListener(&progress);
+	testresult.addListener (&progress);
 
 	// insert test-suite at test-runner by registry
 	CPPUNIT_NS::TestRunner testrunner;
-	testrunner.addTest(CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest());
+	testrunner.addTest (CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest ());
 	testrunner.run(testresult);
 
 	// output results in compiler-format
 	CPPUNIT_NS::CompilerOutputter compileroutputter(&collectedresults, std::cerr);
-	compileroutputter.write();
+	compileroutputter.write ();
 
 	// Output XML for Jenkins CPPunit plugin
 	ofstream xmlFileOut("cppTestPARSERhResults.xml");
